@@ -1,0 +1,221 @@
+@import '../../global/global.css';
+
+body{
+  padding: 0px;
+}
+body.light-mode{
+  background-color: var(--cor-claro);
+}
+section.projetosLucas {
+    background-color: #00000096;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+}
+
+/* Conteúdo */
+section.projetosLucas .conteudos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 10px 80px;
+}
+
+/* Topo */
+section.projetosLucas .conteudos .topo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+
+section.projetosLucas .conteudos .topo .opcoes {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+section.projetosLucas .conteudos .topo .opcoes h3 {
+    font-family: var(--bold);
+    font-size: 1.5rem;
+    color: var(--cor-claro);
+    letter-spacing: 10px;
+}
+section.projetosLucas .conteudos .topo .opcoes a  {
+    display: flex;
+    color: var(--cor-escuro);
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    font-family: var(--bold);
+    font-size: 0.8rem;
+    background-color: var(--cor-principal);
+    padding: 10px;
+    margin: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    letter-spacing: 3px;
+}
+
+section.projetosLucas .conteudos .topo .opcoes a:hover{
+    opacity: 0.8;
+    scale: 1.1;
+    color: var(--cor-claro);
+}
+
+/* <section class="proImgs"> */
+section.proImgs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 20px;
+    overflow: hidden;
+  }
+  section.proImgs .imagem {
+    width: 100%;
+    max-width: 400px;
+    min-height: 400px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 100px 20px 20px 20px;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    z-index: 2;
+  }
+  section.proImgs .circulo {
+    width: 1000px;
+    height: 1000px;
+    border: 5px dashed var(--cor-secundaria);
+    border-radius: 50%;
+    position: absolute;
+    bottom: -500px;
+    top: 650px;
+    left: -250px;
+    animation: rodando 90s linear infinite;
+    z-index: 1;
+    position: fixed;
+  }
+
+  @keyframes rodando {
+    0% {
+      transform: translate(0, -50%) rotate(0deg);
+    }
+    100% {
+      transform: translate(0, -50%) rotate(360deg);
+    }
+  }
+  section.proImgs .partes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: 100%;
+    max-width: 50%;
+    margin-left: auto;
+    z-index: 2;
+  }
+  section.proImgs .partes .parte {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    position: relative;
+  }
+  section.proImgs .partes .parte.meio {
+    margin: 80px 500px 80px 0;
+  }
+  section.proImgs .partes .parte .icone {
+    width: 100%;
+    max-width: 250px;
+    min-width: 250px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 80px 20px 20px 20px;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-right: 10px solid var(--cor-principal);
+    margin: 0 20px;
+    z-index: 2;
+  }
+  section.proImgs .partes .parte .icone:hover{
+    scale: 1.2;
+  }
+  section.proImgs .partes .parte.meio .icone {
+    border-radius: 20px 80px 20px 20px; 
+  }
+  section.proImgs .partes .texto h2 {
+    font-family: var(--bold);
+    font-size: 2rem;
+    color: var(--cor-claro);
+    line-height: 1.5;
+  }
+  section.proImgs .partes .texto h2 span {
+    color: var(--cor-principal);
+  }
+  section.proImgs .partes .texto p {
+    font-family: var(--regular);
+    font-size: 1rem;
+    color: var(--cor-claro);
+    opacity: 0.5;
+    line-height: 1.5;
+    padding: 10px 0 0 0;
+  }
+  /* Responsivo */
+  @media screen and (max-width: 1000px) {
+    section.projetosLucas .conteudos {
+        padding: 3px 10px 3px 30px;
+    }
+    section.projetosLucas .conteudos .topo .opcoes a {
+      scale: 0.8;
+    }
+    section.projetosLucas .conteudos .topo .opcoes a:hover{
+      scale: 1;
+    }
+    section.proImgs {
+      flex-direction: column;
+      padding: 10px;
+      width: 100%;
+      z-index: 3;
+    }
+    section.proImgs .imagem {
+      min-height: 250px;
+    }
+    section.proImgs .circulo {
+      width: 800px;
+      height: 800px;
+      left: -450px;
+      top: 500px;
+      position: fixed;
+    }
+    section.proImgs .partes {
+      align-items: flex-start;
+      max-width: 100%;
+      padding: 0 0 50px 0;
+      scale: 0.8;
+    }
+    section.proImgs .partes .parte {
+      padding: 0px;
+    }
+    section.proImgs .partes .parte.meio {
+      padding: 0;
+    }
+    section.proImgs .partes .parte .icone {
+      width: 100%;
+      max-width: 120px;
+      min-width: 120px;
+      height: 120px;
+      border-radius: 50px 20px 20px 20px;
+      margin: 0 20px;
+    }
+
+  }

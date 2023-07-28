@@ -1,0 +1,225 @@
+section.projects {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+section.projects.mostrar {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+section.projects.mostrar .quadro-projects {
+  top: 0;
+}
+section.projects .quadro-projects {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 10px;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 0 0 20px 20px;
+  position: absolute;
+  top: -100vh;
+  background-color: var(--cor-escuro);
+  border-bottom: 30px solid var(--cor-principal);
+  border-right: 30px solid var(--cor-principal);
+  border-left: 30px solid var(--cor-principal);
+  transition: all 0.3s;
+}
+section.projects .quadro-projects button.close {
+  background-color: transparent;
+  position: absolute;
+  right: -140px;
+  top: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+section.projects .quadro-projects button.close:hover {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+section.projects .quadro-projects button.close img {
+  width: 100%;
+  max-width: 100px;
+}
+section.projects .quadro-projects .nome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+section.projects .quadro-projects .nome .foto {
+  width: 150px;
+  min-width: 150px;
+  height: 150px;
+  min-height: 150px;
+  background-size: cover;
+  background-position: top left;
+  border-radius: 50%;
+  background-color: var(--cor-principal);
+}
+section.projects .quadro-projects .nome h2 {
+  font-family: var(--bold);
+  font-size: 2rem;
+  color: var(--cor-claro);
+  padding: 0 0 0 20px;
+}
+section.projects .quadro-projects .itens {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+section.projects .quadro-projects .itens .item.maior {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 30px 30px 30px;
+  border-radius: 20px;
+  width: calc(50% - 10px);
+  background-color: var(--cor-secundaria);
+}
+section.projects .quadro-projects .itens .item.maior h3 {
+  font-family: var(--bold);
+  font-size: 2rem;
+  color: var(--cor-escuro);
+}
+section.projects .quadro-projects .itens .coluna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+}
+
+section.projects .quadro-projects .itens .coluna img {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+section.projects .quadro-projects .itens .coluna .item.cinza {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 20px 0;
+}
+section.projects .quadro-projects .itens .coluna .item.cinza h3 {
+  font-family: var(--regular);
+  font-size: 0.8rem;
+  color: var(--cor-claro);
+  opacity: 0.5;
+}
+section.projects .quadro-projects .itens .coluna .item.cinza h2 {
+  font-family: var(--bold);
+  font-size: 1.2rem;
+  color: var(--cor-claro);
+}
+section.projects .quadro-projects .itens .coluna .item.cinza ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1.5rem;
+  font-family: var(--regular);
+  font-size: 1.2rem;
+  color: var(--cor-claro);
+  opacity: 0.5;
+}
+
+
+section.projects .quadro-projects .itens .coluna .item.destaque {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-color: var(--cor-terciaria);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+section.projects .quadro-projects .itens .coluna .item.destaque h3 {
+  font-family: var(--regular);
+  font-size: 0.8rem;
+  color: var(--cor-escuro);
+  opacity: 0.5;
+}
+section.projects .quadro-projects .itens .coluna .item.destaque h2 {
+  font-family: var(--bold);
+  font-size: 1.2rem;
+  color: var(--cor-escuro);
+}
+/* Responsivo */
+@media screen and (max-width: 1000px) {
+  section.projects {
+    padding: 0 20px 20px 20px;
+  }
+  section.projects .quadro-projects {
+    padding: 20px;
+    border-bottom: 15px solid var(--cor-principal);
+    border-right: 15px solid var(--cor-principal);
+    border-left: 15px solid var(--cor-principal);
+  }
+  section.projects .quadro-projects button.close {
+    right: 10px;
+    top: 10px;
+  }
+  section.projects .quadro-projects button.close img {
+    max-width: 60px;
+  }
+  section.projects .quadro-projects .nome {
+    flex-direction: column;
+  }
+  section.projects .quadro-projects .nome .foto {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    min-height: 100px;
+  }
+  section.projects .quadro-projects .nome h2 {
+    font-size: 1.5rem;
+    padding: 40px 40px 10px 40px;
+    text-align: center;
+  }
+  section.projects .quadro-projects .itens {
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 0 0 0;
+  }
+  section.projects .quadro-projects .itens .item.maior {
+    display: none;
+  }
+  section.projects .quadro-projects .itens .coluna {
+    width: 100%;
+  }
+  section.projects .quadro-projects .itens .coluna .item.cinza {
+    padding: 30px;
+  }
+  section.projects .quadro-projects .itens .coluna .item.destaque {
+    padding: 30px;
+  }
+}

@@ -1,0 +1,5 @@
+@import '../../global/global.css';
+
+@import './partials/section-modal.css';
+@import './partials/section-projetos.css';
+@import './partials/section-projects.css';

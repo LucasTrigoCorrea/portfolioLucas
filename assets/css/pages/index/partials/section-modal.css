@@ -1,0 +1,274 @@
+section.modal {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  z-index: 5;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: all 0.3s;
+}
+section.modal.mostrar {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+}
+section.modal.mostrar .quadro {
+  top: 0;
+}
+section.modal .quadro {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
+  width: 100%;
+  max-width: 700px;
+  border-radius: 0 0 20px 20px;
+  position: absolute;
+  top: -100vh;
+  background-color: var(--cor-escuro);
+  border-bottom: 30px solid var(--cor-principal);
+  border-right: 30px solid var(--cor-principal);
+  border-left: 30px solid var(--cor-principal);
+  transition: all 0.3s;
+}
+section.modal .quadro button.fechar {
+  background-color: transparent;
+  position: absolute;
+  right: -140px;
+  top: 10px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+section.modal .quadro button.fechar:hover {
+  opacity: 0.5;
+  transform: scale(1.2);
+}
+section.modal .quadro button.fechar img {
+  width: 100%;
+  max-width: 100px;
+}
+section.modal .quadro .nome {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+section.modal .quadro .nome .foto {
+  width: 150px;
+  min-width: 150px;
+  height: 150px;
+  min-height: 150px;
+  background-size: cover;
+  background-position: top left;
+  border-radius: 50%;
+  background-color: var(--cor-principal);
+}
+section.modal .quadro .nome h2 {
+  font-family: var(--bold);
+  font-size: 2rem;
+  color: var(--cor-claro);
+  padding: 0 0 0 20px;
+}
+section.modal .quadro .itens {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0 0 0;
+}
+section.modal .quadro .itens .item.maior {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 20px;
+  width: calc(50% - 10px);
+  background-color: var(--cor-secundaria);
+}
+section.modal .quadro .itens .item.maior h3 {
+  font-family: var(--bold);
+  font-size: 2rem;
+  color: var(--cor-escuro);
+}
+section.modal .quadro .itens .item.maior p {
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0 0 0 ;
+  font-family: var(--bold);
+  font-size: 1rem;
+  color: var(--cor-escuro);
+  line-height: 1.2rem;
+}
+section.modal .quadro .itens .item.maior ul {
+  padding: 20px;
+  font-family: var(--bold);
+  font-size: 1rem;
+  color: var(--cor-escuro);
+  line-height: 1.2rem;
+  opacity: 0.8;
+}
+section.modal .quadro .itens .coluna {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: calc(50% - 10px);
+}
+section.modal .quadro .itens .coluna .item.cinza {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 30px;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  margin: 0 0 20px 0;
+}
+section.modal .quadro .itens .coluna .item.cinza h3 {
+  font-family: var(--regular);
+  font-size: 0.8rem;
+  color: var(--cor-claro);
+  opacity: 0.5;
+}
+section.modal .quadro .itens .coluna .item.cinza h2 {
+  font-family: var(--bold);
+  font-size: 1.2rem;
+  color: var(--cor-claro);
+  padding: 10px 0;
+}
+section.modal .quadro .itens .coluna .item.cinza .skills {
+  scale: 1.2;
+}
+section.modal .quadro .itens .coluna .item.cinza .skills svg {
+  border-radius: 5px 5px 0 0;
+}
+
+
+section.modal .quadro .itens .coluna .item.destaque {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--cor-terciaria);
+  padding: 20px;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+section.modal .quadro .itens .coluna .item.destaque h3 {
+  font-family: var(--regular);
+  font-size: 0.8rem;
+  color: var(--cor-escuro);
+  opacity: 0.5;
+}
+section.modal .quadro .itens .coluna .item.destaque h2 {
+  font-family: var(--bold);
+  font-size: 1.2rem;
+  color: var(--cor-escuro);
+  padding: 5px 0 5px 0;
+}
+
+section.modal .quadro .itens .coluna .item.destaque .destaqueLinks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+section.modal .quadro .itens .coluna .item.destaque .destaqueLinks .um {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+}
+section.modal .quadro .itens .coluna .item.destaque .destaqueLinks .dois {
+  display: flex;
+  flex-direction: row;
+}
+section.modal .quadro .itens .coluna .item.destaque .destaqueLinks a {
+  color: var(--cor-claro);
+  font-family: var(--regular);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  transition: all 0.3s;
+}
+section.modal .quadro .itens .coluna .item.destaque .destaqueLinks svg {
+  color: var(--cor-claro);
+  font-family: var(--regular);
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  margin: 3px 15px;
+  transition: all 0.3s;
+}
+section.modal .quadro .itens .coluna .item.destaque .destaqueLinks a:hover {
+  scale: 1.2;
+}
+section.modal .quadro .itens .coluna .item.destaque .destaqueLinks svg:hover {
+  scale: 1.2;
+}
+section.modal .quadro .itens .coluna .item.destaque .destaqueLinks img {
+  width: 25px;
+  height: 25px;
+  margin: 3px 15px;
+}
+/* Responsivo */
+@media screen and (max-width: 1000px) {
+  section.modal {
+    padding: 0 20px 20px 20px;
+  }
+  section.modal .quadro {
+    padding: 20px;
+    border-bottom: 15px solid var(--cor-principal);
+    border-right: 15px solid var(--cor-principal);
+    border-left: 15px solid var(--cor-principal);
+  }
+  section.modal .quadro button.fechar {
+    right: 10px;
+    top: 10px;
+  }
+  section.modal .quadro button.fechar img {
+    max-width: 60px;
+  }
+  section.modal .quadro .nome {
+    flex-direction: column;
+  }
+  section.modal .quadro .nome .foto {
+    width: 100px;
+    min-width: 100px;
+    height: 100px;
+    min-height: 100px;
+  }
+  section.modal .quadro .nome h2 {
+    font-size: 1.5rem;
+    padding: 20px 0 0 0;
+    text-align: center;
+  }
+  section.modal .quadro .itens {
+    flex-direction: column;
+    width: 100%;
+    padding: 30px 0 0 0;
+  }
+  section.modal .quadro .itens .item.maior {
+    display: none;
+  }
+  section.modal .quadro .itens .coluna {
+    width: 100%;
+  }
+  section.modal .quadro .itens .coluna .item.cinza {
+    padding: 50px 20px 20px 20px;
+  }
+  section.modal .quadro .itens .coluna .item.destaque {
+    padding: 50px 20px 20px 20px;
+  }
+
+}
